@@ -8,5 +8,6 @@ Tecnologia:
 -Oracle database
 -JavaScript
 -jQuery
--Consumo y creacion de API con django
+-Consumo de api
+-Creacion de API con django
 
