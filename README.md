@@ -7,5 +7,6 @@ Tecnologia:
 -Django
 -Oracle database
 -JavaScript
+-jQuery
 -Consumo y creacion de API con django
 
