@@ -1,6 +1,7 @@
 Tienda de accesorios para animales.
 
 Tecnologia:
+-Patron de arquitectura: MVT
 -html5
 -css3
 -Bootstrap
