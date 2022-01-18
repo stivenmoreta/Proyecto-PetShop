@@ -1,0 +1,99 @@
+
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block stylesheet %}
+
+{% endblock %}
+{% block content %}
+<br>
+<h2 style="text-align: center; color: black;" class="footer-herading">
+    Mantenedor de productos
+</h2>
+    <div class="slidebar-tittle">
+        <div class="container">
+            <div style="margin-top: 50px;" class="row">
+                <div class="col-md-7">
+                    <h1>Actualizar producto</h1><br>
+                    {% if form %}
+                    <form method="POST" action="" enctype="multipart/form-data" id="formulario">
+                        <div class="form-group">
+                            {% csrf_token %} {{ form.as_p }}
+                        </div>
+                        <div><br><br>
+                            <button type="input"  class="btn btn-warning ">Guardar</button>
+                            <input type="submit" class="btn btn-primary btnwidth" id="id_guardar" value="Guardar">
+                            <!-- <input type="reset" class="btn btn-primary btnwidth" id="id_nuevo" value="Nuevo"> -->
+                            <a class="btn btn-success btnwidth" href="{% url 'editorProducto' 'ins' -1 %}">Nuevo</a>
+                            {% if id != '-1' %}
+                            <a class="btn btn-danger btnwidth" href="{% url 'editorProducto' 'del' id %}">Eliminar</a>
+                            {% endif %}
+                            <a class="btn btn-info btnwidth" href="{% url 'index' %}">Inicio</a>
+                            {% if mesg %}
+                            <div id="form_message" class="alert alert-danger" role="alert">{{ mesg }}</div>
+                            {% endif %}
+                        </div>
+                    </form>
+                    <br><br><br>
+                    {% endif %}
+                  
+
+                </div>
+                <div class="col-md-5">
+                    <img class="img-fluid rounded-pill" style="margin-right: 80px; margin-top: 50px;" width="800px"
+                        height="800px" src="/media/images/gato-trabajando.jpg" alt="">
+                </div>
+
+            </div>
+            {% if list %}
+            <div class="row">
+                <div class="col-md-16">
+                    <table style="width:100%;" class="border border-success">
+                        <thead class="border border-success">
+                            <tr>
+                                <th scope="col">Sku</th>
+                                <th scope="col">Nombre</th>
+                                <th scope="col">Marca</th>
+                                <th scope="col">Precio</th>
+                                <th scope="col">Descripcion</th>
+                                <th scope="col">Stock</th>
+                                <th scope="col">categoria</th>
+                                <th scope="col">Imagen</th>
+                                <th class="titulo_boton">Editar</th>
+                                <th class="titulo_boton">Eliminar</th><br>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for ve in list %}
+                            <tr>
+                                <td>{{ ve.sku }}</td>
+                                <td>{{ ve.nombre }}</td>
+                                <td>{{ ve.marca }}</td>
+                                <td>{{ve.precio}}</td>
+                                <td>{{ve.descripcion}}</td>
+                                <td>{{ve.stock}}</td>
+                                <td>{{ve.categoria}}</td>
+    
+                                <td><img style="width: 120px; height: 120px;" src="/media/{{ ve.imagenProducto }}"
+                                        class="mini_producto" alt=""></td>
+                                <td><a href="{% url 'editorProducto' 'upd' ve.sku %}"
+                                        class="btn btn-primary btn-sm boton_chico">Editar</a>
+                                </td>
+                                <td><a href="{% url 'editorProducto' 'del' ve.sku%}"
+                                        class="btn btn-danger btn-sm boton_chico">Eliminar</a>
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            {% endif %}
+
+        </div>
+
+    </div>
+    <br>
+    <a href="http://127.0.0.1:8000/admin" class="btn btn-info btn-sm">Administración</a>
+    <a href="{% url 'index' %}" class="btn btn-info btn-sm">Home page</a>
+{% endblock content %}

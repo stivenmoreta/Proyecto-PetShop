@@ -1,0 +1,202 @@
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #333;
+    font-size: 1.3rem;
+    line-height: 1.4em;
+    margin: 0;
+}
+
+.logo-nav-container {
+    display: flex;
+    justify-content: space-between;
+    /* lo alineamos al centro */
+    align-items: center;
+  
+    flex-wrap: wrap;
+  }
+
+.container-text {
+    width: 85%;
+    max-width: 850px;
+    margin: auto;
+}
+
+.h1 {
+    font-size: 2rem;
+    line-height: 1.3em;
+}
+
+.encabezado {
+    background: aquamarine;
+    color: black;
+}
+
+.encabezado a {
+    color: black;
+    text-decoration: none;
+}
+
+.Logo {
+    float: left;
+    align-items: center;
+    padding: 20px;
+
+} 
+
+.Navi {
+    margin: auto;
+}
+
+
+.Navi ul {
+    margin: auto;
+    padding: 0;
+    list-style: none;
+    
+}
+
+.Navi ul li {
+    display: inline-block;
+}
+
+.Navi ul li a {
+    display: block;
+    padding: 0.5rem 1rem;
+}
+
+
+
+
+/*Inicio codigo s*/
+.cabezera-icono {
+    max-width: 100% !important;
+  }
+
+
+.cabezera-mobil-ul{
+    text-align: center !important;
+}
+
+.cabezera-mobil-li{
+    
+    padding-right: 10px;
+}
+
+.cabezera-mobil-li a{
+    color: white;
+    text-transform: uppercase;
+}
+
+.centrar-logo{
+    float: center !important;
+    text-align: center;
+}
+
+.cabezera-letra{
+    font-size: 17.5px !important;
+
+}
+.letraapi{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 800;
+    font-size: 1.3rem;
+    line-height: 1.4em;
+    color: #333;
+    border-radius: 10px;
+    margin-top: 20px;
+    text-align: center;
+
+}
+
+.texto-centro-index{
+    background-color: #0a6a77;
+    border-radius: 10px;
+    margin-top: 20px;
+    text-align: center;
+    border: 1px rgb(136, 130, 130) solid;
+    height: 200px;
+}
+
+.cliente{
+    height: 250px;
+    width: 250px;
+}
+
+.texto-centro-index img{
+    height:50px; 
+    width: 50px;
+    display: block;
+    margin: auto;
+}
+
+
+
+.precabezera-mini{
+    padding: 0px;
+    margin: 0px;
+    background-color: #d6d6d1 !important;
+}
+
+/*Fin codigo s*/
+
+/*formulario contacto*/
+#formulario-contacto {
+    font-size: 70%;
+}
+
+.input_enviar{
+border: none !important;
+background-color: #f2ab00 !important;
+color: #fff !important;
+font-size: 14px !important;
+font-weight: 700 !important;
+text-transform: uppercase !important;
+line-height: 1 !important;
+padding: 15px 52px !important;
+margin-top: 0px !important;
+outline: none !important;
+transition: all 0.3s ease 0s !important;
+border-radius: 5px !important;
+display: inline !important;
+margin-right: 25px !important;
+height: 44px !important;
+width: auto  !important;
+}
+.input_enviar:hover{
+    background: #333 !important;
+}
+/*fin formulario contacto*/
+
+/*inicio carrito pagar*/
+.precio_derecha{
+    text-align: right;
+    float: right;
+    
+}
+
+.p_d{
+    background-color: #f2ab00 !important;
+    border-radius: 30px !important;
+    color: #fff !important;
+    display: block !important;
+    font-size: 14px !important;
+    font-weight: 700 !important;
+    line-height: 1 !important;
+    padding: 18px 10px 17px !important;
+    text-align: center !important;
+    text-transform: uppercase !important;
+    text-transform: uppercase !important;
+    transition: all 0.3s ease 0s !important;
+    width: 100% !important;
+}
+
+/*fin carrito pagar*/   
+.nota_especial{
+    line-height: 24px;
+    color: #0a6a77;
+    font-size: 16px;
+}
+.need_help {
+    pointer-events: none;
+    cursor: default;
+}

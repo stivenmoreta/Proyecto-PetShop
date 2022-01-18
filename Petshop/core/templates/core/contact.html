@@ -1,0 +1,101 @@
+
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block stylesheet %}
+
+{% endblock %}
+{% block content %}
+    <!-- area contacto inicio -->
+    <div class="contact-area pb-100px">
+        <div class="container">
+            <div class="custom-row-2">
+                <div class="col-lg-4 col-md-5 mb-lm-60px col-sm-12 col-xs-12 w-sm-100">
+                    <div class="contact-info-wrap">
+                        <div class="single-contact-info">
+                            <div class="contact-icon">
+                                <i class="ion-android-call"></i>
+                            </div>
+                            <div class="contact-info-dec">
+                                <p><a href="+56984651234">Teléfono: +56984651234</a></p>
+                            </div>
+                        </div>
+                        <div class="single-contact-info">
+                            <div class="contact-icon">
+                                <i class="ion-android-globe"></i>
+                            </div>
+                            <div class="contact-info-dec">
+                                <p><a href="pet.shop@gmail.com">Email: pet.shop@gmail.com</a></p>
+                            </div>
+                        </div>
+                        <div class="single-contact-info">
+                            <div class="contact-icon">
+                                <i class="ion-android-pin"></i>
+                            </div>
+                            <div class="contact-info-dec">
+                                <p>Cerca de metro República,</p>
+                                <p>Echaurren 26.</p>
+                            </div>
+                        </div>
+                        <div class="contact-social">
+                            <h3>Síguenos</h3>
+                            <div class="social-info">
+                                <ul>
+                                    <li>
+                                        <a href="https://www.facebook.com/"><i class="ion-social-facebook"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="https://twitter.com/"><i class="ion-social-twitter"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.youtube.com/"><i class="ion-social-youtube"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.instagram.com/"><i class="ion-social-instagram"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8 col-md-7 col-sm-12 col-xs-12">
+                    <div class="contact-form">
+                        <div class="contact-title mb-30">
+                            <h1>Mapa</h1>
+                            <hr>
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d832.2584716124279!2d-70.66642922441822!3d-33.44842367003357!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662c5aa8058d7e7%3A0xc20992113dd7ed4!2sEchaurren%2026%2C%20Santiago%2C%20Regi%C3%B3n%20Metropolitana!5e0!3m2!1ses-419!2scl!4v1624316127184!5m2!1ses-419!2scl"
+                                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                            <h2>Ponerse en contacto</h2>
+                        </div>
+                        <form method="POST" action="#" class="contact-form-style" id="formulario-contacto">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <input type="text" name="txtNombre" placeholder="Nombre*" />
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <input type="email" name="txtEmail" aria-describedby="emailHelp"
+                                        placeholder="email*" />
+                                </div>
+
+                                <div class="col-lg-12">
+                                    <input type="text" name="txtTema" placeholder="Tema*" />
+                                </div>
+                                <div class="col-lg-12 ">
+                                    <textarea name="txtMensaje" placeholder="Tu mensaje*"></textarea>
+                                    <br>
+                                    <!--<button class="submit" type="submit">Enviar</button> -->
+                                    <input class="input_enviar" type="submit" value="enviar">
+                                    <button type="reset">limpiar</button>
+                                </div>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- area contacto final -->
+{% endblock content %}

@@ -1,0 +1,81 @@
+
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block stylesheet %}
+
+{% endblock %}
+{% block content %}
+    <!-- Breadcrumb Area Start -->
+        <div class="breadcrumb-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="breadcrumb-content">
+                            <ul class="nav">
+                                <li><a href="{% url 'index' %}">Inicio</a></li>
+                                <li>Sobre Nosotros</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!-- Breadcrumb Area End-->
+
+    <!-- sobre nosotros inicio -->
+        <section class="about-area pb-100px">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="about-left-image mb-md-30px mb-lm-30px ">
+                            <img src="{% static 'core/img/Sobre_Nosotros.jpg' %}" alt="" class="img-responsive" />
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="about-content">
+                            <div class="about-title">
+                                <h2>Bienvenido a Petshop</h2> 
+                            </div>
+                            <p class="mb-30px">
+                                ¡Bienvenidos a Petshop!, aquí podrás encontrar todo tipo de accesorios, alimentos, camas y mucho más. Por el momento no tenemos gran contenido o productos a la venta, pero no dudes en visitar esta página a diario.
+                                Estamos constantemente pendientes de nuestros clientes y sus comentarios, por lo que si tienes alguna sugerencia de incluir algún producto de interés, no dudes en contactarnos.
+                                Atendemos de lunes a viernes y días festivos, nuestra tienda esta ubicada en Echaurren 26, a pasos de metro República, en Contacto tienes un mapa de como ubicarnos, para saber nuestros costos de envío y delivery, no dudes en mandarnos un correo o llamarnos.
+                            </p>
+                            <p>
+                                Como empresa intentamos diariamente volver de este sitio web un lugar más amigable y fluido para nuestros clientes, si notas alguna falla no dudes en contactarnos a la brevedad, este sitio es para todos
+                                y nuestro único medio de comunicación entre nosotros (¡Por el momento!), cuidémoslo para lograr la mejor atención posible.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-50px">
+                    <div class="col-md-4 mb-lm-30px">
+                        <div class="single-about">
+                            <h4>Nuestra empresa</h4>
+                            <p>
+                                A pesar de hacernos llamar una empresa, no somos muchos, pero lo importante es nuestra pasión por los animales, nuestra meta es ofrecer la mayor variedad posible de productos
+                                para aquellas personas con animales poco frecuentes.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-lm-30px">
+                        <div class="single-about">
+                            <h4>El equipo</h4>
+                            <p>
+                                Detrás de esta empresa se encuentran 4 informáticos diseñando su primera página web, intentamos dentro de nuestro entendimiento diseñar una página web 100% funcional, con todas las características de una página normal,
+                                sin embargo, no queremos que esta página sea algo pasajero, queremos dejar nuestro propio estilo en ella, para sentirnos identificados con ella.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-lm-30px">
+                        <div class="single-about">
+                            <button class="btn btn-warning" id="Nosotros">¡Nota especial!</button>
+                            <div class="nota_especial" id="contenido"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <!-- fin sobre nosotros -->
+{% endblock content %}

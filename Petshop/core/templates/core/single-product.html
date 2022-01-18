@@ -1,0 +1,61 @@
+
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block stylesheet %}
+
+{% endblock %}
+{% block content %}
+  <!-- Breadcrumb Area Start -->
+        <div class="breadcrumb-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="breadcrumb-content">
+                            <ul class="nav">
+                                <li><a href="{% url 'index' %}">Inicio</a></li>
+                                <li><a href="{% url 'tiendaProducto' %}">Productos</a></li>
+                                <li><a href="single-product.html">Producto Seleccionado</a></li>
+                                <li>Producto</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!-- Breadcrumb Area End-->
+            <!-- Shop details Area start -->
+            <div class="product-details-area">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-6 col-lg-6 col-md-6">
+                            <div class="product-details-img product-details-tab position-relative">
+                                <div class="">
+                                    <div class="">
+                                        <img class="w-100 "  src="/media/{{ producto.imagenProducto }}"  id=''/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6">
+                            <div class="product-details-content">
+                                <h2>{{ producto.nombre}}</h2>
+                                <p class="reference">SKU:<span> {{producto.sku}}</span></p>
+                                <div class="pricing-meta">
+                                    <ul>
+                                        <li id='' class="cuttent-price"> {{producto.precio}} </li>
+                                    </ul>
+                                </div>
+                                <div class="pro-details-list">
+                                    <ul>
+                                        <li id='descripcion'>{{ producto.descripcion }}</li>
+                                       
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>  
+            </div>
+{% endblock content %}

@@ -1,0 +1,99 @@
+
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block stylesheet %}
+
+{% endblock %}
+{% block content %}
+    <!-- Shop Category Area End -->
+    <div class="shop-category-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-9 order-lg-last col-md-12 order-md-first">
+                    <!-- Top de Cabezera del Shop -->
+                    <div class="shop-top-bar">
+                        <div class="row align-items-center">
+                            <div class="col-12 col-md-6 mb-3 mb-md-0">
+                                <nav class="shop-grid-nav">
+                                    <ul class="nav nav-pills align-items-center" id="pills-tab" role="tablist">
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- Termino Cabezera Top del Shop -->
+
+                    <!-- Comienzo del contenido shop -->
+                    <div class="shop-bottom-area mt-35">
+                        <div class="tab-content jump">
+
+                            <!-- Contenido linea de productos -->
+                            {% if list %}
+                            {% for ve in list %}
+                            <div id="shop-2" class="tab-pane active">
+                                <div class="shop-list-wrap scroll-zoom">
+                                    <div class="slider-single-item">
+                                        <div class="row list-product">
+                                            <div class="col-md-12 padding-0px product-inner">
+                                                <div class="row mb-30px">
+                                                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                                                        <div class="left-img">
+                                                            <div class="img-block">
+                                                                <a href="{% url 'producto_ficha' ve.sku %}" class="thumbnail">
+                                                                    <img class="first-img"
+                                                                        src="/media/{{ ve.imagenProducto }}"
+                                                                        alt="" />
+                                                                    <img class="second-img"
+                                                                        src="/media/{{ ve.imagenProducto }}"
+                                                                        alt="" />
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8 d-flex">
+                                                        <div class="product-desc-wrap align-self-center">
+                                                            <div class="product-decs">
+                                                                <h2><a href="{% url 'producto_ficha' ve.sku %}"
+                                                                        class="product-link">{{ ve.nombre}}</a></h2>
+                                                                <div class="pricing-meta">
+                                                                    <ul>
+                                                                        <li class="current-price">${{ ve.precio}}</li>
+                                                                    </ul>
+                                                                </div>
+                                                                <div class="product-intro-info">
+                                                                    <ul>
+                                                                        <li>{{ ve.descripcion}}</li>
+
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                            <div class="add-to-link">
+                                                                <ul>
+
+                                                                </ul>
+                                                            </div>
+                                                            <div class="in-stock">Disponibilidad: <span>{{ ve.stock}} En
+                                                                    Stock</span></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+                            {% endif %}
+                            <!-- Termino linea productos -->
+                        </div>
+                        <!-- Termino contenido productos -->
+                    </div>
+                    <!-- Termino contenido Shop -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Termino contenido Shop -->
+{% endblock content %}

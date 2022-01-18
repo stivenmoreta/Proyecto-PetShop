@@ -1,0 +1,82 @@
+
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block stylesheet %}
+
+{% endblock %}
+{% block content %}
+    <!-- Inicio de Slider -->
+    <div class="slider-area">
+        <div class="hero-slider-wrapper">
+            <!-- Single Slider  -->
+            <div class="single-slide slider-height-1 bg-img d-flex"
+                data-bg-image="{% static 'core/img/Home_1.jpg' %}">
+            </div>
+            <!-- Single Slider  -->
+            <div class="single-slide slider-height-1 bg-img d-flex"
+                data-bg-image="{% static 'core/img/Home_2.jpg' %}">
+            </div>
+            <!-- Single Slider  -->
+        </div>
+    </div>
+    </div>
+    <!-- Fin de Slider -->
+
+    <!-- consumir api-->
+    <div id='cajaapi'>
+        <div class="letraapi">
+            <ul>
+                <li>CLIENTE DEL DIA</li>
+            </ul>
+        </div>
+        <img class="rounded mx-auto d-block cliente" id='clientedeldia'
+            src="{% static 'core/img/GATOAPI.jpg' %}" alt="">
+
+    </div>
+
+
+    <!-- Fin texto central-->
+
+    <!-- inicio categoria dislizable -->
+    <div class="thumb-category-area ptb-100px">
+        <div class="container">
+            <div class="row">
+                <div class="thumb-category-slider slider-nav-style-1">
+                    <div class="thumb-slider-inner">
+                        <div class="thumb-category">
+                            <a href="{% url 'tiendaProducto' %}">
+                                <img src="{% static 'core/img/producto_1.jpg' %}" alt="thumb-image">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="thumb-slider-inner">
+                        <div class="thumb-category">
+                            <a href="{% url 'tiendaProducto' %}">
+                                <img src="{% static 'core/img/producto_2.jpg' %}" alt="thumb-image">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="thumb-slider-inner">
+                        <div class="thumb-category">
+                            <a href="{% url 'tiendaProducto' %}">
+                                <img src="{% static 'core/img/producto_3.jpg' %}" alt="thumb-image">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="thumb-slider-inner">
+                        <div class="thumb-category">
+                            <a href="{% url 'tiendaProducto' %}">
+                                <img src="{% static 'core/img/producto_4.jpg' %}" alt="thumb-image">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- fin ategoria dislizable  -->
+    
+{% endblock content %}
+   
+    

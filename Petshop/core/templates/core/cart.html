@@ -1,0 +1,145 @@
+
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block stylesheet %}
+
+{% endblock %}
+{% block content %}
+        <!-- inicio mini-nav -->
+            <div class="breadcrumb-area">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="breadcrumb-content">
+                                <ul class="nav">
+                                    <li><a href="{% url 'index' %}">Inicio</a></li>
+                                    <li>carro</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <!-- fin mini-nav-->
+
+
+        <!-- Inicio area de lista productos -->
+        <div class="cart-main-area pb-100px">
+            <div class="container">
+                <h3 class="cart-page-title">Tus productos</h3>
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                       <!-- <form action="probando.php" method="POST" name="formulario_carrito">--> 
+                            <div class="table-content table-responsive cart-table-content">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>producto</th>
+                                            <th>nombre</th>
+                                            <th>precio unitario</th>
+                                            <th>cantidad</th>
+                                            <th>Subtotal</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+
+                                        <tr>
+                                            <td class="product-thumbnail">
+                                                <a  href="#"><img class="img-responsive" src="{% static 'core/images/product-image/galleta_perro.png" alt="" /></a>
+                                            </td>
+                                            <td class="product-name"><a href="#">galletas de perro</a></td>
+                                            <td class="product-price-cart"><span id="precio_gp"  class="amount" >6000</span></td>
+                                            <td class="product-quantity">
+
+                                            
+                                            <div class="group-buttons">
+                                                <button class="button-link btn btn-light" id="disminuye">-</button>                                                
+                                                <label  id="cantidad">1</label>
+                                                <button class="button-link btn btn-light" id="incrementa">+</button>
+                                            </div>
+
+                                            </td>
+                                            <td class="product-subtotal" id="subtotal_1" name="subtotal_1">6000</td>
+                                        </tr>
+
+                                        
+
+                                        <tr>
+                                            <td class="product-thumbnail">
+                                                <a  href="#"><img class="img-responsive" src="{% static 'core/images/product-image/galleta_gato.jpg" alt="" /></a>
+                                            </td>
+                                            <td class="product-name"><a href="#">galletas de gato</a></td>
+                                            <td class="product-price-cart"><span  id="precio_gg"  class="amount">5000</span></td>
+                                            <td class="product-quantity">
+                                            
+                                            <div class="group-buttons">
+                                                <button class=" btn btn-light"  id="disminuye_2">-</button>                                                
+                                                <label id="cantidad_2" >1</label>
+                                                <button class=" btn btn-light"  id="incrementa_2">+</button>
+                                            </div>
+
+                                            </td>
+                                            <td type="text" class="product-subtotal" id="subtotal_2" >5000</td>
+                                        </tr>
+
+
+
+
+                                        <tr>
+                                            <td class="product-thumbnail">
+                                                <a  href="#"><img class="img-responsive" src="{% static 'core/images/product-image/ropa_perro.jpg" alt="" /></a>
+                                            </td>
+                                            <td class="product-name"><a href="#">ropa de perro</a></td>
+                                            <td class="product-price-cart"><span id="precio_rp" class="amount">7000</span></td>
+                                            <td class="product-quantity">
+
+                                            <div class="group-buttons">
+                                                <button class=" btn btn-light"  id="disminuye_3">-</button>                                                
+                                                <label id="cantidad_3" >1</label>
+                                                <button class=" btn btn-light"  id="incrementa_3">+</button>
+                                            </div>
+
+                                            </td>
+                                            <td type="text" class="product-subtotal" id="subtotal_3" >7000</td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+
+                         <!--</form> -->
+                        <form action="POST"  action="probandophp/probando.php" id="formulario-carrito">
+                            <div class="row">
+                                <div class="col-sm-12 col-lg-12 col-md-12 mt-md-30px">
+                                    <div class="grand-totall">
+                                            <div class="title-wrap">
+                                            <h4 class="cart-bottom-title section-bg-gary-cart">Total del carro</h4>
+                                            </div>
+                                            
+                                            <h5>Producto total <span type="text" id="total">0</span></h5>
+                                            <div class="total-shipping">
+                                                <h5>Precio de envio</h5>
+                                                <ul type="optgroup"> 
+                                                    
+                                                    <label for="Standard">Standard</label><label class="precio_derecha" for="Standard">2000</label>                                                                
+                                                    <input type="radio" id="Standard" name="precio_envio" value="2000">
+                                                    
+                                                    <br>
+                                                    <label for="Express">Express</label><span class="precio_derecha">5000</span>                                            
+                                                    <input type="radio" id="Express" name="precio_envio" value="5000">
+                                                                                                                                            
+                                                </ul>
+                                            </div>
+                                            <h4 class="grand-totall-title">Gran Total <input readonly="readonly" class="precio_derecha" name="gran_total" id="gran_total" value="0"></h4>                                                                        
+                                            <input class="p_d" type="submit" value="pagar">
+                                            
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+{% endblock content %}
