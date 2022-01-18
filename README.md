@@ -8,5 +8,12 @@ Integrantes:
 	- Rocio Sagardia
 	- Nicolas Senno
 	- Nicolas Pinilla
-Repositorio GitHub: https://github.com/nicopinilla/PetshopfinalDjango.git
-Cuenta Publica
+Tecnologia:
+-HTML5
+-CSS3
+-BOOTSTRAP
+-DJANGO
+-ORACLE DATABASE
+-JavaScript
+-API RESTS
+
