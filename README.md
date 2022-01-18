@@ -1,3 +1,5 @@
+Tienda de accesorios para animales.
+
 Tecnologia:
 -html5
 -css3
