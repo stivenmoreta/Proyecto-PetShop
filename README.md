@@ -1,4 +1,4 @@
-Tienda de accesorios para animales.
+Tienda de accesorios y comida para animales.
 
 Tecnologia:
 -Patron de arquitectura: MVT
